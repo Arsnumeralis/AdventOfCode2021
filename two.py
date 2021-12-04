@@ -1,9 +1,6 @@
 with open("two.txt", "r") as data:
     data_items = [line.strip() for line in data]
-directions = []
-for item in data_items:
-    item = item.split(" ")
-    directions.append(item)
+directions = [item.split(" ") for item in data_items]
 x, y, z = 0, 0, 0
 for num in range(len(directions)):
     if directions[num][0] == "forward":
