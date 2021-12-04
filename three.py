@@ -5,7 +5,7 @@ bits = len(data_items[0])
 gamma = ''
 epsilon = ''
 big_data = [[dig for dig in item] for item in data_items]
-#gamma
+# gamma
 for i in range(bits):
     count = 0
     for big in range(len(big_data)):
@@ -40,7 +40,7 @@ for i in range(bits):
             count_one += 1
         else:
             count_zero += 1
-    
+
     if count_one >= count_zero:
         filtered = [n for n in filtered if n[i] == "1"]
     else:
@@ -63,15 +63,13 @@ for i in range(bits):
             count_one += 1
         else:
             count_zero += 1
-    
+
     if count_one >= count_zero:
         filtered = [n for n in filtered if n[i] == "0"]
     else:
         filtered = [n for n in filtered if n[i] == "1"]
     if len(filtered) == 1:
         break
-print(filtered)
-print(len(filtered))
 co2 = filtered[0]
 co2 = "".join(co2)
 
@@ -79,6 +77,3 @@ oxygen = int(oxygen, 2)
 co2 = int(co2, 2)
 prod = oxygen * co2
 print(prod)
-
-
-# # PART 2 NOT YET WORKING
